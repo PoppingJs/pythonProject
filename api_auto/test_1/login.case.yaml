@@ -1,0 +1,35 @@
+title: 登录成功
+desc: 登录成功用
+request:
+  url: /adminLogin
+  method: POST
+  headers: {"XXX": "AAA"}
+  json:
+    principal: student,
+    credentials: 123456a,
+    imageCode: lemon
+assertions: []
+---
+title: 登录失败
+desc: 登录成功用
+request:
+  url: /adminLogin
+  method: POST
+  headers: { "XXX": "AAA" }
+  json:
+    principal: studen,
+    credentials: 123456,
+    imageCode: lemon
+assertions: []
+---
+title: 登录未知
+desc: 登录成功用
+request:
+  url: /adminLogin
+  method: POST
+  headers: { "XXX": "AAA" }
+  json:
+    principal: f,
+    credentials: 1,
+    imageCode: lemon
+assertions: []
